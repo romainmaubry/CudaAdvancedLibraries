@@ -1,4 +1,4 @@
-# CUDAatScaleForTheEnterpriseCourseProjectTemplate
+# CUDA Advanced Libraries
 This is a template for the course project for the CUDA advanced libraries
 
 ## Project Description
