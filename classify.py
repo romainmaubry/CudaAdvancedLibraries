@@ -57,7 +57,8 @@ def show_learning(epoch_no,train_acc,test_acc):
     global chart_x
     global chart_y_train
     global chart_y_test
-    print('epoch no:',epoch_no,' train_acc:','%6.4f'%train_acc, 'test_acc:','6.4f'%test_acc)
+    print(type(epoch_no),' ',type(train_acc),' ',type(test_acc))
+    print('epoch no:',epoch_no,' train_acc:','%6.4f'%train_acc, 'test_acc:','%6.4f'%test_acc)
     chart_x.append(epoch_no+1)
     chart_y_train.append(1.0-train_acc)
     chart_y_test.append(1.0-test_acc)
@@ -79,7 +80,7 @@ def forward_pass(x):
     for i,w in enumerate(hidden_layer_w):
         z = np.dot(w,x)
         hidden_layer_y[i]=np.tanh(z)
-    hidden_output_array = np.concatenate((np.array([1,0]),hidden_layer_y))
+    hidden_output_array = np.concatenate((np.array([1.0]),hidden_layer_y))
     for i,w, in enumerate(output_layer_w):
         z = np.dot(w,hidden_output_array)
         output_layer_y[i] = 1.0/(1.0+np.exp(-z))
@@ -110,12 +111,15 @@ def adjust_weights(x):
         output_layer_w[i]-=(hidden_output_array*LEARNING_RATE*error)
 
 for i in range(EPOCHS):
+    print('i=',i)
     np.random.shuffle(index_list)
     correct_training_results = 0
+    index=0
     for j in index_list:
+        index+=1
         x = np.concatenate((np.array([1.0]),x_train[j]))
         forward_pass(x)
-        if output_layer_y.argmax() == ytrain[j].argmax():
+        if output_layer_y.argmax() == y_train[j].argmax():
             correct_training_results +=1
         backward_pass(y_train[j])
         adjust_weights(x)
