@@ -69,7 +69,8 @@ def plot_learning():
     plt.xlabel('training epochs')
     plt.ylabel('error')
     plt.legend()
-    plt.show_()
+    #plt.show()
+    plt.savefig('train.png')
 
 
 def forward_pass(x):
