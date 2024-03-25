@@ -35,3 +35,18 @@ def read_mnist():
 x_train,y_train,x_test,y_test = read_mnist()
 index_list = list(range(len(x_train)))
 
+def layer_w(neuron_count,input_count):
+    weights = np.zeros((neuron_count,input_count+1))
+    for i in range(1,neuron_count):
+        for j in range(1,(input_count+1)):
+            weights[i][j]=np.random.uniform(-0.1,0.1)
+    return weights
+
+hidden_layer_w = layer_w(25,784)
+hidden_layer_y = np.zeros(25)
+hidden_layer_error = np.zeros(25)
+
+output_layer_w = layer_w(10,25)
+output_layer_y = np.zeros(10)
+output_layer_error = np.zeros(10)
+
