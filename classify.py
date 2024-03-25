@@ -42,7 +42,7 @@ def layer_w(neuron_count,input_count):
             weights[i][j]=np.random.uniform(-0.1,0.1)
     return weights
 
-neuron_count=50
+neuron_count=10
 hidden_layer_w = layer_w(neuron_count,784)
 hidden_layer_y = np.zeros(neuron_count)
 hidden_layer_error = np.zeros(neuron_count)
