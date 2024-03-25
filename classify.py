@@ -57,7 +57,6 @@ def show_learning(epoch_no,train_acc,test_acc):
     global chart_x
     global chart_y_train
     global chart_y_test
-    print(type(epoch_no),' ',type(train_acc),' ',type(test_acc))
     print('epoch no:',epoch_no,' train_acc:','%6.4f'%train_acc, 'test_acc:','%6.4f'%test_acc)
     chart_x.append(epoch_no+1)
     chart_y_train.append(1.0-train_acc)
@@ -70,7 +69,7 @@ def plot_learning():
     plt.xlabel('training epochs')
     plt.ylabel('error')
     plt.legend()
-    plt.showidden_layer_y
+    plt.show_()
 
 
 def forward_pass(x):
@@ -111,7 +110,6 @@ def adjust_weights(x):
         output_layer_w[i]-=(hidden_output_array*LEARNING_RATE*error)
 
 for i in range(EPOCHS):
-    print('i=',i)
     np.random.shuffle(index_list)
     correct_training_results = 0
     index=0
