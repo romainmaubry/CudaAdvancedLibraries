@@ -1,7 +1,7 @@
 # CUDA Advanced Libraries
 ## Project Description
 
-In this project, we first implemented a handwritten classification of the MNIST dataset with one fully connected layer. The code is heavily based on the bool "Learning Deep Learning" by Markus Ekman. We then twiked the parameters to obtain various learning curves. The code was not run on GPUs. In order to run on GPU's we implemented a Convolution Neural Network heavily based oon the book "Machine learning with Python" by Cuantum.
+In this project, we first implemented a handwritten classification of the MNIST dataset with one fully connected layer. The code is heavily based on the bool "Learning Deep Learning" by Markus Ekman. We then tweaked the parameters to see the influence of the neruon numbers on the learning curves. The code was not run on GPUs. In order to run on GPU's we implemented a Convolution Neural Network heavily based oon the book "Machine learning with Python" by Cuantum.
 We obtained similar graphs, as well as the verification that Keras was run on GPUs.
 
 ## Code Organization
