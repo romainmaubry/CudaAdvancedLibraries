@@ -1,9 +1,8 @@
 # CUDA Advanced Libraries
-This is a template for the course project for the CUDA advanced libraries
-
 ## Project Description
 
-Beyond just being a template for course members, this project can be used by non-course members as the general structure for CUDA projects.
+In this project, we first implemented a handwritten classification of the MNIST dataset with one fully connected layer. The code is heavily based on the bool "Learning Deep Learning" by Markus Ekman. We then twiked the parameters to obtain various learning curves. The code was not run on GPUs. In order to run on GPU's we implemented a Convolution Neural Network heavily based oon the book "Machine learning with Python" by Cuantum.
+We obtained similar graphs, as well as the verification that Keras was run on GPUs.
 
 ## Code Organization
 
@@ -11,13 +10,13 @@ Beyond just being a template for course members, this project can be used by non
 This folder should hold all binary/executable code that is built automatically or manually. Executable code should have use the .exe extension or programming language-specific extension.
 
 ```data/```
-This folder should hold all example data in any format. If the original data is rather large or can be brought in via scripts, this can be left blank in the respository, so that it doesn't require major downloads when all that is desired is the code/structure.
+This folder contains the MNITS handwritten classification data.
 
 ```lib/```
-Any libraries that are not installed via the Operating System-specific package manager should be placed here, so that it is easier for inclusion/linking.
+The folder is empty.
 
 ```src/```
-The source code should be placed here in a hierarchical fashion, as appropriate.
+The source code contains the two python files mentioned before, namely classication.py and cnn.py.
 
 ```README.md```
 This file should hold the description of the project so that anyone cloning or deciding if they want to clone this repository can understand its purpose to help with their decision.
@@ -26,7 +25,7 @@ This file should hold the description of the project so that anyone cloning or d
 This file should hold the human-readable set of instructions for installing the code so that it can be executed. If possible it should be organized around different operating systems, so that it can be done by as many people as possible with different constraints.
 
 ```Makefile or CMAkeLists.txt or build.sh```
-There should be some rudimentary scripts for building your project's code in an automatic fashion.
+The project was made in python so there is no makefile.
 
 ```run.sh```
-An optional script used to run your executable code, either with or without command-line arguments.
+run.sh runs the cnn example.
