@@ -1,1 +1,1 @@
-python3 cnn.py
+python3 src/cnn.py
