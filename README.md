@@ -10,7 +10,7 @@ We obtained a similar graph cnn.png, as well as the verification that Keras was 
 This folder should hold all binary/executable code that is built automatically or manually. Executable code should have use the .exe extension or programming language-specific extension.
 
 ```data/```
-This folder contains the MNITS handwritten classification data.
+This folder contains the MNIST handwritten classification data.
 
 ```lib/```
 The folder is empty.
